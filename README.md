@@ -1,4 +1,4 @@
-# Football Transfer Market Dataset
+# Football Transfer Market Dataset from 2016 Winter td
 
 ## Overview
 Comprehensive football transfer market dataset containing 19,454 player transfers from major European leagues and worldwide, covering **2016-2025** transfer windows. The dataset includes detailed transfer information with standardized player nationalities, positions, clubs, leagues, and transfer fees.
@@ -96,34 +96,20 @@ Data sourced from [Guardian.co.uk](https://www.theguardian.com/football/transfer
 | `Timestamp` | str | Record timestamp | 0.0% |
 | `Transfer_date_parsed` | datetime | Parsed transfer date | 4.6% |
 
-## Data Quality & Cleaning Applied
 
-### 1. Nationality Standardization
-- **345 nationality mappings** applied to standardize country codes
-- Converted all variations to ISO 3-letter codes (e.g., "England" → "ENG", "Brasil" → "BRA")
-- Fixed typos and inconsistent formats
-- **146 unique nationalities** after standardization
-- **Missing nationality data**: Primarily affects **2021 transfers** (entire year missing nationality data)
+  
+## Data Quality Notes
 
-### 2. Player Position Standardization
-- **8,455 records** modified for consistency
-- Converted abbreviations to full names:
-  - D → Defender
-  - M → Midfielder  
-  - F → Forward
-  - GK → Goalkeeper
-  - W → Winger
+1. **Price Data**: 74.3% of transfers have no price (free transfers, loans, or undisclosed fees)
+2. **Nationality**: 22.4% missing nationality data - **primarily from 2016, 2017 and 2018 where nationality wasn't recorded - so be careful when looking at nationality trends here**
+3. **Position**: 11.8% missing position data
+4. **Special Cases**: 
+   - "Free agent" appears as a club for unattached players (1,557 records)
+   - "Unattached" appears as destination for released players (1,557 records)
+   - "Retired" appears for players ending careers (34 retirements recorded)
+   - Some clubs appear in "Other" category if outside top 5 leagues
 
-### 3. League Data Completion
-- **1,557 missing league values** filled intelligently
-- Created club-to-league mapping from 1,677 clubs
-- All 2021 missing data (76% of that year) successfully filled
-- **Zero null values** remaining in league columns
 
-### 4. Duplicate Removal
-- **10 duplicate transfers** identified and removed
-- Kept records with most complete information (prioritized those with price data)
-- Verified no duplicates remain
 
 ## Key Statistics
 
@@ -157,8 +143,6 @@ Data sourced from [Guardian.co.uk](https://www.theguardian.com/football/transfer
 # Get only transfers with disclosed fees
 paid_transfers = transfers[(transfers['Transfer_type'] == 'fee') & (transfers['Price_numeric'].notna())]
 
-# Get high-value transfers (over 50 million)
-big_transfers = transfers[transfers['Price_numeric'] > 50000000]
 ```
 
 ### Filter by League
@@ -193,16 +177,7 @@ most_buying = transfers['New_club'].value_counts().head(10)
 most_selling = transfers['Prev_club'].value_counts().head(10)
 ```
 
-## Data Quality Notes
 
-1. **Price Data**: 74.3% of transfers have no price (free transfers, loans, or undisclosed fees)
-2. **Nationality**: 22.4% missing nationality data - **primarily from 2021 season where nationality wasn't recorded**
-3. **Position**: 11.8% missing position data
-4. **Special Cases**: 
-   - "Free agent" appears as a club for unattached players (1,557 records)
-   - "Unattached" appears as destination for released players (1,557 records)
-   - "Retired" appears for players ending careers (34 retirements recorded)
-   - Some clubs appear in "Other" category if outside top 5 leagues
 
 ## File Format
 
