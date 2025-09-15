@@ -25,26 +25,6 @@ transfers = pd.read_csv('https://raw.githubusercontent.com/vibedatascience/guard
 
 Data sourced from [Guardian.co.uk](https://www.theguardian.com/football/transfers) transfer windows coverage:
 
-### Transfer Window Sources
-- **2025 Summer**: https://interactive.guim.co.uk/2024/07/transfers/men-summer-2025.json
-- **2024/25 Winter**: https://interactive.guim.co.uk/2024/07/transfers/men-winter-2025.json
-- **2024 Summer**: https://interactive.guim.co.uk/2024/07/transfers/men-summer-2024.json
-- **2023/24 Winter**: https://interactive.guim.co.uk/2024/tw-men-winter-2024/transfersData.json
-- **2023 Summer**: https://interactive.guim.co.uk/2023/tw-men-summer-2023/transfersData.json
-- **2022/23 Winter**: https://interactive.guim.co.uk/2023/tw-men-winter-2023/transfersData.json
-- **2022 Summer**: https://interactive.guim.co.uk/2022/tw-men-summer-2022/transfersData.json
-- **2021/22 Winter**: https://interactive.guim.co.uk/2021/09/tw-men-winter-2022/transfersData.json
-- **2021 Summer**: https://interactive.guim.co.uk/docsdata/1stnMrwQdpXwNubJelzAZDmzw9QqJhHJJ1mrjs3Bt9hQ.json
-- **2020/21 Winter**: https://interactive.guim.co.uk/docsdata/1V_SpJ8gg6OR_Jj_M-0Wz5AL93MdtMCcHMc1d5-aVbME.json
-- **2020 Summer**: https://interactive.guim.co.uk/docsdata-test/1Qpc2Szu2fhjn5HbwpcsE70UdM_UgvlNmd4R4oLAdQfk.json
-- **2019/20 Winter**: https://interactive.guim.co.uk/docsdata-test/1jhha-Gzxgh8fN2J1ZU8pRUMQZv6L0NKKaaJDLPtHqGo.json
-- **2019 Summer**: https://interactive.guim.co.uk/docsdata/1N0tDYC5soeRrgpbZkDWkrws_zd-GKVq45ODlZzG-EH4.json
-- **2018/19 Winter**: https://interactive.guim.co.uk/docsdata-test/1xMtQLF7dWQcH_iuDWjoRWsHRgxx4RkaK05KSAYpTCjI.json
-- **2018 Summer**: https://interactive.guim.co.uk/docsdata-test/1OK4iKZwounIniO0ZOL-rp_Q5AkPmts4LK1gicT6JtyU.json
-- **2017/18 Winter**: https://interactive.guim.co.uk/docsdata-test/17FTsDrP87t4b7si8XTYt_N35yH0kN4Z7GqonaXHuwRw.json
-- **2017 Summer**: https://interactive.guim.co.uk/docsdata-test/1YJQzO5Ngc6LSydUaidGNKQi6Zi3Ipi-Q3E59-v2fjgc.json
-- **2016/17 Winter**: https://interactive.guim.co.uk/docsdata/10WnObzhC6lF1Ho_T_1imgLY4d60_aJsuxHuUuBsjN9s.json
-
 ## Coverage Details
 
 ### Leagues
@@ -185,3 +165,24 @@ most_selling = transfers['Prev_club'].value_counts().head(10)
 - **Encoding**: UTF-8
 - **Size**: ~19,454 records × 14 columns
 - **No index column**: Data saved without pandas index
+
+### Transfer Window Sources
+- **2025 Summer**: https://interactive.guim.co.uk/2024/07/transfers/men-summer-2025.json
+- **2024/25 Winter**: https://interactive.guim.co.uk/2024/07/transfers/men-winter-2025.json
+- **2024 Summer**: https://interactive.guim.co.uk/2024/07/transfers/men-summer-2024.json
+- **2023/24 Winter**: https://interactive.guim.co.uk/2024/tw-men-winter-2024/transfersData.json
+- **2023 Summer**: https://interactive.guim.co.uk/2023/tw-men-summer-2023/transfersData.json
+- **2022/23 Winter**: https://interactive.guim.co.uk/2023/tw-men-winter-2023/transfersData.json
+- **2022 Summer**: https://interactive.guim.co.uk/2022/tw-men-summer-2022/transfersData.json
+- **2021/22 Winter**: https://interactive.guim.co.uk/2021/09/tw-men-winter-2022/transfersData.json
+- **2021 Summer**: https://interactive.guim.co.uk/docsdata/1stnMrwQdpXwNubJelzAZDmzw9QqJhHJJ1mrjs3Bt9hQ.json
+- **2020/21 Winter**: https://interactive.guim.co.uk/docsdata/1V_SpJ8gg6OR_Jj_M-0Wz5AL93MdtMCcHMc1d5-aVbME.json
+- **2020 Summer**: https://interactive.guim.co.uk/docsdata-test/1Qpc2Szu2fhjn5HbwpcsE70UdM_UgvlNmd4R4oLAdQfk.json
+- **2019/20 Winter**: https://interactive.guim.co.uk/docsdata-test/1jhha-Gzxgh8fN2J1ZU8pRUMQZv6L0NKKaaJDLPtHqGo.json
+- **2019 Summer**: https://interactive.guim.co.uk/docsdata/1N0tDYC5soeRrgpbZkDWkrws_zd-GKVq45ODlZzG-EH4.json
+- **2018/19 Winter**: https://interactive.guim.co.uk/docsdata-test/1xMtQLF7dWQcH_iuDWjoRWsHRgxx4RkaK05KSAYpTCjI.json
+- **2018 Summer**: https://interactive.guim.co.uk/docsdata-test/1OK4iKZwounIniO0ZOL-rp_Q5AkPmts4LK1gicT6JtyU.json
+- **2017/18 Winter**: https://interactive.guim.co.uk/docsdata-test/17FTsDrP87t4b7si8XTYt_N35yH0kN4Z7GqonaXHuwRw.json
+- **2017 Summer**: https://interactive.guim.co.uk/docsdata-test/1YJQzO5Ngc6LSydUaidGNKQi6Zi3Ipi-Q3E59-v2fjgc.json
+- **2016/17 Winter**: https://interactive.guim.co.uk/docsdata/10WnObzhC6lF1Ho_T_1imgLY4d60_aJsuxHuUuBsjN9s.json
+
