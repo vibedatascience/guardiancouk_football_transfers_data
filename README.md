@@ -1,7 +1,7 @@
-# Football Transfer Market Dataset from 2016 Winter td
+# Football Transfer Market Dataset from 2016 Winter td - Only Top 5 Leagues
 
 ## Overview
-Comprehensive football transfer market dataset containing 19,454 player transfers from major European leagues and worldwide, covering **2016-2025** transfer windows. The dataset includes detailed transfer information with standardized player nationalities, positions, clubs, leagues, and transfer fees.
+Comprehensive football transfer market dataset containing 19,454 player transfers from major European leagues and worldwide, covering **2016-2025** transfer windows. The dataset includes detailed transfer information with standardized player nationalities, positions, clubs, leagues, and transfer fees. This is only for the Top 5 lagues (incoming and outgoing)
 
 ## File
 
